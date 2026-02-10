@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Block scope
+        {
+            let name = "John Doe";
+            console.log(name);
+        }
+
+        function locaFunc () {
+            // local scope ใช้งานได้เฉพาะใน Function
+            let carName = "hondaa";
+            console.log(carName);
+        }
+        locaFunc();
+
+        function myFunc () {
+            var firstName = "john"; // Function scope ตัวแประที่ประกาศใน function จะไม่สามารถเข้าถึงจากภายนอกได้
+            let lastName = "Doe"; // Function scope ตัวแประที่ประกาศใน function จะไม่สามารถเข้าถึงจากภายนอกได้
+            const age = 30; // Function scope ตัวแประที่ประกาศใน function จะไม่สามารถเข้าถึงจากภายนอกได้
+        }
+    </script>
+</body>
+</html>

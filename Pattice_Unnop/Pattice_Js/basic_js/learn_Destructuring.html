@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person = {
+            firstName : "Beem",
+            lastName : "Muk",
+            age : 25
+        };
+
+        let {firstName, lastName} = person;
+        console.log(firstName, lastName)
+
+        const fruits = ["apple", "Orange","Mango"];
+        let [fruits1, fruits2] = fruits;
+        console.log(fruits1, fruits2);
+
+        const number = [10, 20, 30, 40 ,50]
+        const [num1,num2, ...rest] = number;
+
+        console.log(num1);
+        console.log(num2);
+        console.log(rest);
+    </script>
+</body>
+</html>

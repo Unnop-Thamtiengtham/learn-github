@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // arrow func ประกาศตัวแปร = รับค่า => return ค่าอะไรออกมา
+        const add = (a,b) => a + b;
+
+        // arrow func with out parameters
+        const greet = () => "hello";
+
+        // ถ้ารับค่า parameters มา 1 ตัว ไม่ต้องมี () ก็ได้ 
+        const squre = x => x * x;
+
+        const myFunc = () => {
+            console.log("kuy");
+        }
+        console.log(add(1,2));
+        console.log(myFunc());
+    </script>
+</body>
+</html>

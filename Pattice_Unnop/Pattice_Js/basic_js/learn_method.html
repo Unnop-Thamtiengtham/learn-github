@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // forEach() วนซ้ำผ่านค่าทุกตัวใน array
+        const number = [1, 2, 3, 4, 5];
+        number.forEach(function(nember){
+            console.log(nember);
+        })
+        
+        // map() มีการreturn ค่าผลลัพธ์ที่เปลี่ยนแปลงออกมาได้
+        const num2 = [1, 2, 3, 4, 5];
+        const double = num2.map(function(num2){
+            return num2 * 2;
+        })
+        console.log(double);
+
+         // filter() วนซ้ำตาม function และแสดงค่าเฉพาะที่ถูกต้องของฟังก์ชั่นนั้นออกมา
+        const num3 = [1, 2, 3, 4, 5];
+        const even = num3.filter(function(num3){
+            return num3 % 2 === 0;
+        })
+        console.log(even);
+
+         // reduce() ใช้สำหรับสะสมค่าและสรุปค่าออกมา
+        const num4 = [1, 2, 3, 4, 5];
+        const sum = num4.reduce(function(num4,total){
+
+            return total + num4;
+        }, 0);
+        console.log(sum);
+
+        // some() ทดสอบว่า element อย่างน้อยหนึ่งร้านการใน array ผ่านการทดสอบที่ใช้ได้ฟังก์ชันที่ให้มาหรือไม่ return ค่าเป็น true หากตรงตามเงื่อนไขปละเป็น false หากไม่เข้าเงื่อนไข
+        const num5 = [1, 2, 3, 4, 5];
+        const hasEven = num5.some(function(num5){
+            return num5 % 2 === 0;
+        });
+        console.log(hasEven);
+
+        // every() return ค่า true หาก element ทั้งหมดตรงตามเงื่อนไข ไม่เช่นนั้นจะเป็น flase
+        const num6 = [1, 2, 3, 4, 5];
+        const allPositive = num6.every(function(num6){
+            return num6 > 0;
+        });
+        console.log(allPositive);
+
+        // return ค่าของ element แรกใน array ที่ตรงกับงานการทำงานของ function หากไม่มี element ตรงตามฟังก์จะ return undefined
+        const num7 = [1, 2, 3, 4, 5];
+        const fristEven = num7.find(function(num7){
+            return num7 % 2 === 0;
+        });
+        console.log(fristEven);
+
+        // return ค่าที่ตรงตัวแรกแต่จะ return เป็นตำแหน่ง index แต่ถ้าไม่มีจะ return ค่าเป็น -1
+        const num8 = [1, 2, 3, 4, 5];
+        const fristEvenIndex = num8.findIndex(function(num8){
+            return num8 % 2 === 0;
+        });
+        console.log(fristEvenIndex);
+        
+    </script>
+</body>
+</html>
